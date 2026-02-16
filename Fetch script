@@ -1,0 +1,13 @@
+param([string]$Root="C:\mchain-data")
+New-Item -ItemType Directory -Force -Path $Root | Out-Null
+Set-Location $Root
+
+if (-not (Test-Path "$Root\smartbugs-curated")) {
+  git clone https://github.com/smartbugs/smartbugs-curated.git      # labeled benchmark  [1](https://github.com/smartbugs/smartbugs-curated)
+}
+if (-not (Test-Path "$Root\smartbugs-wild")) {
+  git clone https://github.com/smartbugs/smartbugs-wild.git         # ~47k real contracts  [2](https://github.com/smartbugs/smartbugs-wild)
+}
+if (-not (Test-Path "$Root\SWC-registry")) {
+  git clone https://github.com/SmartContractSecurity/SWC-registry.git # SWC test cases (aux)  [3](https://github.com/SmartContractSecurity/SWC-registry)
+}

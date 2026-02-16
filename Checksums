@@ -1,0 +1,2 @@
+Get-FileHash .\manifest.csv -Algorithm SHA256 | Select-Object Hash | Out-File manifest.csv.sha256
+Get-FileHash .\README.md    -Algorithm SHA256 | Select-Object Hash | Out-File README.md.sha256

@@ -1,0 +1,36 @@
+
+# Dataset FAQ for the M-CHAIN Evaluation
+
+This FAQ answers common questions about the datasets used in the M‑CHAIN evaluation.  
+It explains what the datasets contain, why they were chosen, how they are fetched, and why the dataset repositories remain at their official research sources.
+
+---
+
+## 1. Why are the datasets not stored directly in this repository?
+
+The datasets used in M‑CHAIN are **large public datasets**, and they must remain at their **official sources** for licensing, maintenance, and version‑tracking reasons.
+
+Official dataset sources:
+- SmartBugs Curated (labeled contracts)  
+  https://github.com/smartbugs/smartbugs-curated [1](https://github.com/smartbugs/smartbugs-curated)  
+- SmartBugs Wild (~47k real‑world contracts)  
+  https://github.com/smartbugs/smartbugs-wild [2](https://github.com/smartbugs/smartbugs-wild)  
+- SWC Registry test cases  
+  https://github.com/SmartContractSecurity/SWC-registry [3](https://github.com/SmartContractSecurity/SWC-registry)
+
+These repositories are publicly available, and SmartBugs documentation provides details on dataset composition and usage.  
+Reference: https://github.com/smartbugs/smartbugs/blob/master/doc/datasets.md [4](https://github.com/smartbugs/smartbugs/blob/master/doc/datasets.md)
+
+This repository contains **pointers**, pinned commit hashes, and scripts—not the datasets themselves.
+
+---
+
+## 2. How do I download all the datasets?
+
+Run the PowerShell script provided (`get_datasets.ps1`) or use the commands below:
+
+```powershell
+cd C:\mchain-data
+git clone https://github.com/smartbugs/smartbugs-curated.git       # Curated  [1](https://github.com/smartbugs/smartbugs-curated)
+git clone https://github.com/smartbugs/smartbugs-wild.git          # Wild     [2](https://github.com/smartbugs/smartbugs-wild)
+git clone https://github.com/SmartContractSecurity/SWC-registry.git # SWC      [3](https://github.com/SmartContractSecurity/SWC-registry)

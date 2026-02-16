@@ -1,0 +1,10 @@
+# Data Dictionary (manifest.csv)
+
+| Column             | Meaning                                                       |
+|--------------------|---------------------------------------------------------------|
+| dataset            | Short name of the dataset (folder or canonical label)        |
+| role               | How it is used (labeled benchmark, large corpus, regression) |
+| source             | Official URL of the dataset repository                        |
+| commit_or_release  | Pinned commit hash or release tag                             |
+| date               | Date you fetched / pinned the version                         |
+| notes              | Brief context (size, caveat, maintenance note)   
